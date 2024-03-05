@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class Test1Application {
 	@GetMapping("/message")
 	public String message(){
-		return "API made to webpage";
+		return "API made to webpage woooo";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(Test1Application.class, args);
