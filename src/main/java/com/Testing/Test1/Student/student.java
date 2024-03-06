@@ -1,9 +1,25 @@
 package com.Testing.Test1.Student;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.time.LocalDate;
 
+
+@Entity
+@Table
+@Data
+
+
+
 public class student {
-    private Long id;
+    @Id
+    @GeneratedValue
     private String name;
     private String email;
     private LocalDate dob;
@@ -13,7 +29,7 @@ public class student {
     }
 
     public student(Long id, String name, String email, LocalDate dob, Integer age) {
-        this.id = id;
+       // this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
@@ -27,9 +43,7 @@ public class student {
         this.age = age;
     }
 
-    public Long getId() {
-        return id;
-    }
+
 
     public String getName() {
         return name;
@@ -47,9 +61,7 @@ public class student {
         return age;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -70,7 +82,7 @@ public class student {
     @Override
     public String toString() {
         return "student{" +
-                "id=" + id +
+
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", dob=" + dob +
